@@ -1,0 +1,72 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Join | ConferenceApi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body  align="center">
+      <h1> Speakers Details</h1>
+<p> Welcome to Conference api page</p>
+<form>
+  <table  align="center"  cellspacing="1" cellpadding="1">
+   
+          <tr align="center">
+            <td> <h4><b> Name</b></h4> </td>
+            <td> <h4><b> Company</b></h4></td>
+            <td> <h4><b> Title</b></h4></td>
+            <td> <h4><b> Description</b></h4></td>
+            <td> <h4><b> Schedule</b></h4> </td>
+            <td> <h4><b> CreatedAt</b></h4></td>
+          </tr>
+          
+    <tbody>
+        <% data.forEach((data) => { %>
+    
+           <tr>
+             <td align="center">
+               <%=data.name %>
+             </td>
+              <td align="center">
+                  <%=data.company %>
+              </td>
+                <td align="center">
+                   <%=data.title %>
+                </td>
+                  <td align="center">
+                      <%=data.description %>
+                  </td >
+                    <td align="center">
+                      <%=data.schedule %>
+                    </td>
+                      <td align="center">
+                          <!-- <%=data.createdAt %> -->
+                        <%=dateFormat(data.createdAt, "ddd, mmm dS, yyyy, h:MM:ss TT") %>
+                      </td>
+                    </tr>
+
+     <% }) %>
+    </tbody>
+  </table>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
